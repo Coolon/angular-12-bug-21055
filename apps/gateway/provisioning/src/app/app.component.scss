@@ -1,0 +1,15 @@
+/*
+ * Remove template code below
+ */
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

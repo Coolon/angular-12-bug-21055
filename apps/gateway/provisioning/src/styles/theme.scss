@@ -1,0 +1,27 @@
+@use '~@angular/material' as mat;
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+$primary-palette: mat.define-palette(mat.$indigo-palette);
+$accent-palette:  mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$warn-palette:    mat.define-palette(mat.$red-palette);
+$theme: mat.define-light-theme($primary-palette, $accent-palette, $warn-palette);
+
+@include mat.all-component-themes($theme);
+
+:root {
+  --theme-primary-color: #{mat.get-color-from-palette(map-get($theme, primary))};
+  // @see https://github.com/angular/angular-cli/issues/21055
+  // Uncommenting either of the following two lines will trigger the error.  But only in one of our apps
+  --theme-foreground-color: #{mat.get-color-from-palette(map-get($theme, foreground))};
+  --theme-background-color: #{mat.get-color-from-palette(map-get($theme, background))};
+  --theme-warn-color: #{mat.get-color-from-palette(map-get($theme, warn))};
+  --theme-warn-background-color: #{mat.get-color-from-palette(map-get($theme, warn))};
+  --theme-warn-color-default-contrast: #{mat.get-color-from-palette(map-get($theme, warn), default-contrast)};
+  --theme-selected-item-background-color: #{mat.get-color-from-palette(map-get($theme, primary), 0.15)};
+  --theme-selected-item-border-color: #{mat.get-color-from-palette(map-get($theme, primary), 0.6)};
+  --theme-selected-item-background-hover-color: #{mat.get-color-from-palette(map-get($theme, primary), 0.05)};
+}
