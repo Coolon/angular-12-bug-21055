@@ -18,4 +18,9 @@ $ ng --version
 12.3.6
 ```
 
+To trigger the error run
+
+```shell
+ng serve --project gateway-provisioning
+```
 

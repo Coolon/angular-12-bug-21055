@@ -12,7 +12,6 @@
     "affected:libs": "nx affected:libs",
     "affected:lint": "nx affected:lint",
     "affected:test": "nx affected:test",
-    "build:gateway-provisioning": "nx build --project gateway-provisioning",
     "dep-graph": "nx dep-graph",
     "e2e": "ng e2e",
     "format": "nx format:write",
@@ -24,7 +23,6 @@
     "ng": "nx",
     "nx": "nx",
     "pretty": "npx sort-package-json",
-    "start:gateway-provisioning": "nx serve  --project gateway-provisioning  --port 4205 --host 0.0.0.0",
     "test": "ng test",
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator"
