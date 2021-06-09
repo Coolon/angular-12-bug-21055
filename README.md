@@ -13,6 +13,9 @@ v12.16.3
 $ npm --version
 7.16.0
 ```
-
+```shell
+$ ng --version
+12.3.6
+```
 
 
